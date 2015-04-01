@@ -1,0 +1,32 @@
+﻿{
+	"Application": {
+		"BaseUrl": "http://localhost:5000/"
+	},
+	"Data": {
+		"DefaultConnection": {
+			"ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=ItaPortal_Net;Trusted_Connection=True;MultipleActiveResultSets=true"
+		}
+	},
+	"EntityFramework": {
+		"ApplicationDbContext": {
+			"ConnectionString": "Data:DefaultConnection:ConnectionString"
+		}
+	},
+	"SendGrid": {
+		"Credential": {
+			"Username": "rajajhansi",
+			"Password": "RajaRocks123"
+		}
+	},
+	"Smtp": {
+		"DeliveryMethod":  "Network",
+		"UseDefaultCredentials": "false",
+		"EnableSsl": "true",
+		"Host": "smtp.gmail.com",
+		"Port": "587",
+		"Credential": {
+			"Username": "rajajhansi@gmail.com",
+			"Password": "Ad1t2Mahat3Gm#"
+		}
+	}
+}

@@ -1,0 +1,114 @@
+﻿<div id="signUpModal" class="omb_login modal fade" data-ng-controller="signup as vm">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="omb_authTitle">
+                    Please {{vm.title}} for ITA Or <a href="#signInModal" role="button" data-toggle="modal" data-dismiss="modal">
+                        Sign In
+                    </a>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" name="signUpForm" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.firstName.$invalid}">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user blue"></i>
+                                    </span>
+                                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" data-ng-model="vm.registration.firstName" required>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.firstName.$error.required">Required</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.lastName.$invalid}">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user blue"></i>
+                                    </span>
+                                    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name" data-ng-model="vm.registration.lastName" required>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.lastName.$error.required">Required</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.email.$invalid}">
+                                <div class=" input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope blue"></i></span>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email address" data-ng-model="vm.registration.email" required>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.email.$error.required">Required</span>
+                            <span class="help-block"
+                                  ng-show="signUpForm.email.$error.email">Not a valid email address</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.password.$invalid}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock blue"></i></span>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" data-ng-model="vm.registration.password" required>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.password.$error.required">Required</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.confirmPassword.$invalid}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock blue"></i></span>
+                                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" data-ng-model="vm.registration.confirmPassword" required>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.confirmPassword.$error.required">Required</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.securityQuestion.$invalid}">
+                                <div class=" input-group">
+                                    <span class="input-group-addon"><i class="fa fa-question-circle  blue"></i></span>
+                                    <select id="securityQuestion" name="securityQuestion" class="form-control" placeholder="Select a Security Question" data-ng-model="vm.registration.securityQuestion"
+                                            data-ng-options="question.name as question.name for question in vm.securityQuestions">
+                                        <option value="">Select a Security Question</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <span class="help-block"
+                                  ng-show="signUpForm.securityQuestion.$invalid">Not a valid security question</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group" data-ng-class="{'has-error': signUpForm.securityAnswer.$invalid}">
+                                <div class=" input-group">
+                                    <span class="input-group-addon"><i class="fa fa-pencil-square-o blue"></i></span>
+                                    <input type="text" id="securityAnswer" name="securityAnswer" class="form-control" placeholder="Enter answer" data-ng-model="vm.registration.securityAnswer" 
+                                           data-ng-required="vm.registration.securityQuestion"/>
+                                </div>
+                            </div>
+
+                            <span class="help-block"
+                                  ng-show="signUpForm.securityAnswer.$invalid">Not a valid answer</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block loginSubmit" data-ng-class="vm.active" type="submit" data-ng-click="vm.signUp(signUpForm)" ng-disabled="((!signUpForm.$valid) || vm.active)">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

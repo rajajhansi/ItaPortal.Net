@@ -1,0 +1,165 @@
+﻿.dropdown-menu {
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid #6daedf;
+    z-index: 1039;   
+}
+.dropdown-menu:after {
+    content:' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #6daedf transparent;
+    content:' ';
+    position: absolute;
+    top: -6px;
+}
+
+.loginSubmit.active
+{
+    background: #e7e7e7 url(images/login-animation.gif) no-repeat bottom center !important;
+    color: #a6a6a6 !important;
+    background-color: #e7e7e7 !important;
+}
+@media (min-width: 768px) {
+    .navbar-right .dropdown-menu:after {
+        right: 2px;
+    }
+     .dropdown-menu{
+        padding: 0;
+    }
+    .dropdown-menu .divider {
+        background-color: #6daedf;
+        margin: 0;
+    }
+    .dropdown-menu>li>a{
+        padding: 7px 20px;
+    }
+    .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+        background: #6daedf;
+        color: #ffffff;
+    }
+    .profile-dropdown {
+        padding-left: 119px;        
+    }
+    .dropdown-profile-pic{
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    .dropdown-profile-pic .dropdown-profile-pic-btn{
+        position: absolute;
+        padding: 7px 15px 7px 14px !important;
+        background: #6daedf;
+        color: #ffffff !important;
+        bottom: -34px;
+       -webkit-transform: translate3d(0,0,0);
+        -webkit-transition: bottom 100ms linear;
+    -moz-transition: bottom 100ms linear;
+    -o-transition: bottom 100ms linear;
+    transition: bottom 100ms linear;
+    }
+    .dropdown-profile-pic:hover .dropdown-profile-pic-btn{
+        bottom: 0px;
+    }
+    .dropdown-profile-pic img {
+        width: 119px;
+    }
+}
+@media (max-width: 768px) {
+   
+    .dropdown-menu:after {
+        display: none;
+    }
+    .navbar-right .dropdown-menu:after {
+        display: none;
+    }
+    .dropdown-profile-pic {
+        display: none;
+    }
+}
+
+
+/*
+    Note: It is best to use a less version of this file ( see http://css2less.cc
+    For the media queries use @screen-sm-min instead of 768px.
+    For .omb_spanOr use @body-bg instead of white.
+*/
+
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+	/*line-height: 300%; */
+}
+	
+.omb_login .omb_socialButtons a {
+	color: white; // In yourUse @body-bg 
+	opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+	opacity:1;    	
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
+.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+.omb_login .omb_socialButtons .omb_btn-microsoft {background: #00aced;}
+
+.omb_login .omb_loginOr {
+	position: relative;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+	background-color: #cdcdcd;
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -0.6em;
+	margin-left: -1.5em;
+	background-color: white;
+	width: 3em;
+	text-align: center;
+}			
+
+.omb_login .omb_loginForm .input-group.i {
+	width: 2em;
+}
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+}
+
+	
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+		margin-top:10px;
+ 	}		
+}
+
+/* animate css*/
+body {
+  color: #5a5a5a;
+}
+.container{
+    padding: 42px;
+    padding-bottom: 140px;
+}

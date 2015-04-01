@@ -1,0 +1,15 @@
+{
+  "profiles": [
+    {
+      "name": "IIS Express",
+      "launchBrowser": true,
+      "sdkVersion": "kre-clr-win-x86.1.0.0-beta3"
+    },
+    {
+      "name": "web",
+      "commandName": "web",
+      "commandLineArgs": "--server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:85\"",
+      "sdkVersion": "kre-clr-win-x86.1.0.0-beta3"
+    }
+  ]
+}
